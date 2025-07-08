@@ -49,5 +49,6 @@ For example:
 
 
 - **Summary**
+
 1. For same combinational logic, synthesis result is probably not affected by coding style (assign or always_comb).
 2. In fact, always_comb can express all combinational logic with user-friendly readability.
