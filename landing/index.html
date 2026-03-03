@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTL Coding Style Guide</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e0e0e0;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            margin-bottom: 3rem;
+        }
+        .cards {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 2.5rem 3rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            min-width: 240px;
+            backdrop-filter: blur(10px);
+        }
+        .card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+        .card .flag { font-size: 3rem; margin-bottom: 1rem; display: block; }
+        .card .lang { font-size: 1.4rem; font-weight: 600; color: #fff; }
+        .card .desc { font-size: 0.9rem; color: #a0a0a0; margin-top: 0.5rem; }
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .footer a { color: #888; text-decoration: none; }
+        .footer a:hover { color: #aaa; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RTL Coding Style Guide</h1>
+        <p class="subtitle">Best practices for writing clean, maintainable RTL code</p>
+        <div class="cards">
+            <a href="en/index.html" class="card">
+                <span class="flag">🇬🇧</span>
+                <div class="lang">English</div>
+                <div class="desc">English Version</div>
+            </a>
+            <a href="zh/index.html" class="card">
+                <span class="flag">🇨🇳</span>
+                <div class="lang">中文</div>
+                <div class="desc">中文版本</div>
+            </a>
+        </div>
+        <div class="footer">
+            <p>&copy; 2023 Yunqi Liu &middot; <a href="https://github.com/YuunqiLiu/RTLCodingStyle">GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -8,6 +8,7 @@ RTL Coding Style
 
 This is an RTL Coding Style tutorial.
 
+`中文版 <../zh/index.html>`_
 
 .. toctree::
    :maxdepth: 1
