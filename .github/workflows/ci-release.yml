@@ -69,17 +69,20 @@ jobs:
 
       - name: Package docs
         run: |
-          cd build && tar czf ../rtl-coding-style-docs-${{ github.ref_name }}.tar.gz . && cd ..
+          cd build && tar czf ../rtl-coding-style-docs.tar.gz . && cd ..
 
       - name: Package skill
+        # Pack as rtl-coding-style/SKILL.md so tool_integration.sh can find it
+        # by SKILL_DIR="rtl-coding-style"
         run: |
-          tar czf rtl-coding-style-skill-${{ github.ref_name }}.tar.gz -C skill .
+          mkdir -p _skill_pkg/rtl-coding-style
+          cp skill/SKILL.md _skill_pkg/rtl-coding-style/SKILL.md
+          tar czf rtl-coding-style-skill.tar.gz -C _skill_pkg rtl-coding-style
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           generate_release_notes: true
           files: |
-            rtl-coding-style-docs-${{ github.ref_name }}.tar.gz
-            rtl-coding-style-skill-${{ github.ref_name }}.tar.gz
-            skill/SKILL.md
+            rtl-coding-style-docs.tar.gz
+            rtl-coding-style-skill.tar.gz
